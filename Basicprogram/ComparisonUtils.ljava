@@ -1,0 +1,14 @@
+public class ComparisonUtils {
+    public static <T> boolean isEqual(T a, T b) {
+        if (a == null) {
+            return b == null;
+        }
+        return a.equals(b);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Strings match: " + isEqual("Java", "Java")); 
+        System.out.println("Integers match: " + isEqual(100, 200));    
+        System.out.println("Mixed types match: " + isEqual("10", 10));
+    }
+}
